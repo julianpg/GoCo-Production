@@ -237,37 +237,38 @@
 			LastName: ìDoeî,
 			Email: ìjohn.doe@salesforce.comî,
 	   };*/
-  
+
+		  
 		  embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		  embedded_svc.settings.entryFeature = 'LiveAgent';
   
-		  embedded_svc.init(
-			  'https://gocogroup--atdev.my.salesforce.com',
-			  'https://atdev-gocochat.cs126.force.com/',
-			  gslbBaseURL,
-			  '00D3L0000008jqS',
-			  'GoCo_Popup_60secs',
-			  {
-				  baseLiveAgentContentURL: 'https://c.la1-c1cs-lo2.salesforceliveagent.com/content',
-				  deploymentId: '5723L0000004C9X',
-				  buttonId: '5733L0000008OJX',
-				  baseLiveAgentURL: 'https://d.la1-c1cs-lo2.salesforceliveagent.com/chat',
-				  eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3L0000004CALUA2_17178fccc46',
-				  isOfflineSupportEnabled: false
-			  }
-		  );
-	  };
-  
-	  if (!window.embedded_svc) {
-		  var s = document.createElement('script');
-		  s.setAttribute('src', 'https://gocogroup--atdev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-		  s.onload = function() {
-			  initESW(null);
-		  };
-		  document.body.appendChild(s);
-	  } else {
-		  initESW('https://service.force.com');
-	  }
+		embedded_svc.init(
+			'https://gocogroup.my.salesforce.com',
+			'https://gocochat.secure.force.com',
+			gslbBaseURL,
+			'00D4J0000003sel',
+			'GoCo_Popup_60secs',
+			{
+				baseLiveAgentContentURL: 'https://c.la1-c2-lo2.salesforceliveagent.com/content',
+				deploymentId: '5724J000000H67x',
+				buttonId: '5734J000000H7WK',
+				baseLiveAgentURL: 'https://d.la1-c2-lo2.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3L0000004CALUA2_17178fccc46',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://gocogroup.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
   </script>
      </body>
 </html
