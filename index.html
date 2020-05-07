@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	 </head>
+    <body>
+    	   
+        <iframe src="https://www.gocompare.com" width="1440px" height="750px"></iframe>
+<!-- Start of Invitations -->
+<script>
+	/*inject parent div*/
+	var parentDiv = document.createElement('div');
+	parentDiv.setAttribute('id', 'snapins_invite');
+	parentDiv.setAttribute('inert', 'true');
+	parentDiv.setAttribute('aria-live', 'assertive');
+	parentDiv.setAttribute('role', 'dialog');
+	parentDiv.setAttribute('aria-atomic', 'true');
+	parentDiv.setAttribute("class","embeddedServiceInvitation");
+	parentDiv.innerHTML =
+				 '<div>\
+				  <button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>\
+				  <img class="embeddedServiceAvatar" src="https://gocogroup--c.documentforce.com/servlet/servlet.ImageServer?id=0154J000000fNct&oid=00D4J0000003sel&lastMod=1588863470000"></img>\
+				  <div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">\
+				  <span class="embeddedServiceTitleText" id="snapins_titletext">Need help from a trusted expert? </span>\
+				  </div>\
+				  <div class="embeddedServiceInvitationBody">\
+					  <p id="snapins_bodytext"></p>\
+				  </div>\
+				  </div>\
+				  <div class="embeddedServiceInvitationFooter" aria-describedby="snapins_bodytext">\
+					  <button type="button" class="embeddedServiceActionButton" id="acceptInvite">Chat Now <img src="https://gocogroup--c.documentforce.com/servlet/servlet.ImageServer?id=0154J000000fNd3&oid=00D4J0000003sel&lastMod=1588863550000"></img></button>\
+					  <button type="button" class="embeddedServiceActionButton" id="rejectInvite">No thanks</button>\
+				   </div>';
+	
+	document.getElementsByTagName('body')[0].appendChild(parentDiv);			  
+	//document.body.appendChild(parentDiv);
+	document.getElementById('snapins_bodytext').textContent = "We're here to help you get what you need.";
+  </script>
+  
+  <!--Remove below if font assets available on site-->
+  <style type="text/css">
+		  @font-face {
+		 font-family: GoCoHeadlineWeb;
+		 src: url('GoCoHeadlineWeb-Regular.woff');
+	  }
+	   
+		  @font-face {
+		 font-family: GoCoBodyWeb;
+		 src: url('GoCoBodyWeb-Regular.woff');
+	  }
+  </style>
+  <!--End Font -->
+  
+  <style type='text/css'>
+  .embeddedServiceInvitation {
+	  background-color: transparent;
+	  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.28);
+	  float: right;
+	  max-height: 274px;
+	  max-width: 360px;
+	  -webkit-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.28);
+	  -moz-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.28);
+  }
+  
+  @media only screen and (min-width: 48em) {
+	  /*mobile*/
+	  .embeddedServiceInvitation {
+		  max-width: 360px;
+		  max-height: 274px;
+	  }
+  }
+  
+  .embeddedServiceAvatar {
+	float: right;
+	  height: 135px;
+	  padding-left: 10px;
+	  padding-top: 40px;
+	  width: 110px;
+  }
+  
+  .embeddedServiceCloseIcon {
+	background-color: transparent;
+	bottom: 3%;
+	  border: none;
+	  border-radius: 3px;
+	  color: rgb(63,63,63);
+	cursor: pointer;
+	  float: right;
+	  font-size: 28px;
+	  height: 32px;
+	  width: 32px;	
+  }
+  
+  .embeddedServiceCloseIcon:focus {
+	  outline: none;
+  }
+  
+  .embeddedServiceCloseIcon:focus::before {
+	  content: " ";
+	  position: absolute;
+	  top: 11%;
+	  left: 7%;
+	  width: 85%;
+	  height: 85%;
+	  background-color: rgb(255,255,255);
+	  border-radius: 4px;
+	  pointer-events: none;
+  }
+  
+  .embeddedServiceCloseIcon:active,
+  .embeddedServiceCloseIcon:hover {
+	  background-color: rgb(255,255,255);
+	  color: rgb(0,0,0);
+	  opacity: 0.7;
+  }
+  
+  .embeddedServiceInvitation>.embeddedServiceInvitationHeader {
+	  width: inherit;
+	  line-height: 32px;
+	  padding: 10px;
+	  color: rgb(255,255,255);
+	  background-color: rgb(255,255,255);
+	  overflow: initial;
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: stretch;
+	  border-top-left-radius: 8px;
+	  border-top-right-radius: 8px;
+  }
+  
+  .embeddedServiceInvitationHeader .embeddedServiceTitleText {
+	  font-size: 25px;
+	  font-family: GoCoHeadlineWeb;
+	  line-height: 25px;
+	  color: rgb(63,165,53);
+	  overflow: hidden;
+	  word-wrap: normal;
+	  white-space: normal;
+	  text-overflow: ellipsis;
+	  align-self: stretch;
+	  flex-grow: 1;
+	  max-width: 100%;
+	  position: relative;
+	  top: 40px;
+	  left: 20px
+  }
+  
+  .embeddedServiceInvitation>.embeddedServiceInvitationBody {
+	  background-color: rgb(255,255,255);
+	  max-height: 110px;
+	  min-width: 260px;
+	  margin: 0 8px;
+	  font-size: 14px;
+	  line-height: 20px;
+	  overflow: auto;
+  }
+  
+  .embeddedServiceInvitationBody p {
+	  color: rgb(29,29,29);
+	  padding: 8px;
+	  margin: 12px 0;
+	  font-size: 14px;
+	  font-family: GoCoBodyWeb;
+	  line-height: 22px;
+	  position: relative;
+	  top: 30px;
+	  left: 15px
+  }
+  
+  .embeddedServiceInvitation>.embeddedServiceInvitationFooter {
+	  width: inherit;
+	  color: rgb(255,255,255);
+	  text-align: center;
+	  background-color: rgb(255,255,255);
+	  padding: 10px;
+	  border-bottom-left-radius: 8px;
+	  border-bottom-right-radius: 8px;
+  }
+  
+  .embeddedServiceInvitationFooter>.embeddedServiceActionButton {
+	  font-family: GoCoBodyWeb;
+	  font-size: 14px;
+	  max-height: 40px;
+	  border: none;
+	  border-radius: 100px;
+	  padding: 10px;
+	  padding-right: 20%;
+	  padding-left: 20%;
+	  margin: 4px;
+	  text-align: center;
+	  text-decoration: none;
+	  cursor: pointer;
+	  margin-left: auto;
+	  margin-right: auto;
+	  position: relative;
+	  top: 15px
+  }
+  </style>
+  
+  <script type='text/javascript'>
+  var snapInvitation = document.createElement('style');
+  snapInvitation.type = 'text/css';
+  snapInvitation.innerHTML = '#snapins_invite {background-color: rgb(255,255,255); border-radius: 8px; font-family: "Arial", sans-serif; overflow: visible; visibility: hidden;}';
+  document.getElementsByTagName('body')[0].appendChild(snapInvitation);
+  
+  var acceptInvitation = document.createElement('style');
+  acceptInvitation.type = 'text/css';
+  acceptInvitation.innerHTML = '.embeddedServiceInvitationFooter>#acceptInvite {color: rgb(255,255,255); background-color: rgb(225,25,112); font-weight: bold;}';
+  document.getElementsByTagName('body')[0].appendChild(acceptInvitation);
+  
+  var rejectInvitation = document.createElement('style');
+  rejectInvitation.type = 'text/css';
+  rejectInvitation.innerHTML = '.embeddedServiceInvitationFooter>#rejectInvite {color: rgb(38,24,30); background-color: rgb(255,255,255); text-decoration: underline;}';
+  document.getElementsByTagName('body')[0].appendChild(rejectInvitation);
+  </script>
+  
+  <script type='text/javascript'>
+	  (function() {
+		  document.getElementById('closeInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); };
+		  document.getElementById('rejectInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }; // use this API call to reject invitations
+		  document.getElementById('acceptInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.acceptInvite(); }; // use this API call to start chat from invitations
+		  document.addEventListener('keyup', function(event) { if (event.keyCode == 27) { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }})
+	  })();
+  </script>
+  <!-- End of Invitations -->
+  
+  <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+  <script type='text/javascript'>
+	  var initESW = function(gslbBaseURL) {
+		  embedded_svc.settings.displayHelpButton = false; //Or false
+		  embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+	  /************************************************************************
+	  this would be the setting where we can pass a variable to prefill the chat form
+	  **************************************************************************/
+	  /*    embedded_svc.settings.prepopulatedPrechatFields = {
+			FirstName: ìJohnî,
+			LastName: ìDoeî,
+			Email: ìjohn.doe@salesforce.comî,
+	   };*/
+  
+		  embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		  embedded_svc.settings.entryFeature = 'LiveAgent';
+  
+		  embedded_svc.init(
+			  'https://gocogroup--atdev.my.salesforce.com',
+			  'https://atdev-gocochat.cs126.force.com/',
+			  gslbBaseURL,
+			  '00D3L0000008jqS',
+			  'GoCo_Popup_60secs',
+			  {
+				  baseLiveAgentContentURL: 'https://c.la1-c1cs-lo2.salesforceliveagent.com/content',
+				  deploymentId: '5723L0000004C9X',
+				  buttonId: '5733L0000008OJX',
+				  baseLiveAgentURL: 'https://d.la1-c1cs-lo2.salesforceliveagent.com/chat',
+				  eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3L0000004CALUA2_17178fccc46',
+				  isOfflineSupportEnabled: false
+			  }
+		  );
+	  };
+  
+	  if (!window.embedded_svc) {
+		  var s = document.createElement('script');
+		  s.setAttribute('src', 'https://gocogroup--atdev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		  s.onload = function() {
+			  initESW(null);
+		  };
+		  document.body.appendChild(s);
+	  } else {
+		  initESW('https://service.force.com');
+	  }
+  </script>
+     </body>
+</html
