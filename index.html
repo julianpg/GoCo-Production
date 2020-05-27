@@ -213,7 +213,7 @@
   <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
   <script type='text/javascript'>
 	  var initESW = function(gslbBaseURL) {
-		  embedded_svc.settings.displayHelpButton = false; //Or false
+		  embedded_svc.settings.displayHelpButton = false; //Or true
 		  embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
 		  embedded_svc.settings.prepopulatedPrechatFields = {
@@ -226,10 +226,10 @@
 		  embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		  embedded_svc.settings.entryFeature = 'LiveAgent';
   
-		embedded_svc.init(
+		  embedded_svc.init(
 			'https://gocogroup.my.salesforce.com',
 			'https://gocochat.secure.force.com',
-			gslbBaseURL,
+			 gslbBaseURL,
 			'00D4J0000003sel',
 			'GoCo_Popup_60secs',
 			{
