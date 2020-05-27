@@ -35,20 +35,7 @@
 	document.getElementsByTagName('body')[0].appendChild(parentDiv);			  
 	document.getElementById('snapins_bodytext').textContent = "We're here to help you get what you need.";
   </script>
-  
-  <!--Remove below if font assets available on site-->
-  <style type="text/css">
-		  @font-face {
-		 font-family: GoCoHeadlineWeb;
-		 src: url('GoCoHeadlineWeb-Regular.woff');
-	  }
-	   
-		  @font-face {
-		 font-family: GoCoBodyWeb;
-		 src: url('GoCoBodyWeb-Regular.woff');
-	  }
-  </style>
-  <!--End Font -->
+
   
   <style type='text/css'>
   .embeddedServiceInvitation {
@@ -71,23 +58,23 @@
   
   .embeddedServiceAvatar {
 	float: right;
-	  height: 135px;
-	  padding-left: 10px;
-	  padding-top: 40px;
-	  width: 110px;
+	height: 135px;
+	padding-left: 10px;
+	padding-top: 40px;
+	width: 110px;
   }
   
   .embeddedServiceCloseIcon {
 	background-color: transparent;
 	bottom: 3%;
-	  border: none;
-	  border-radius: 3px;
-	  color: rgb(63,63,63);
+	border: none;
+	border-radius: 3px;
+	color: rgb(63,63,63);
 	cursor: pointer;
-	  float: right;
-	  font-size: 28px;
-	  height: 32px;
-	  width: 32px;	
+	float: right;
+	font-size: 28px;
+	height: 32px;
+	width: 32px;	
   }
   
   .embeddedServiceCloseIcon:focus {
@@ -129,7 +116,7 @@
   
   .embeddedServiceInvitationHeader .embeddedServiceTitleText {
 	  font-size: 25px;
-	  font-family: GoCoHeadlineWeb;
+	  font-family: GoCoHeadlineWeb-Regular;
 	  line-height: 25px;
 	  color: rgb(63,165,53);
 	  overflow: hidden;
@@ -159,7 +146,7 @@
 	  padding: 8px;
 	  margin: 12px 0;
 	  font-size: 14px;
-	  font-family: GoCoBodyWeb;
+	  font-family: GoCoBodyWeb-Regular;
 	  line-height: 22px;
 	  position: relative;
 	  top: 30px;
@@ -177,7 +164,7 @@
   }
   
   .embeddedServiceInvitationFooter>.embeddedServiceActionButton {
-	  font-family: GoCoBodyWeb;
+	  font-family: GoCoBodyWeb-Regular;
 	  font-size: 14px;
 	  max-height: 40px;
 	  border: none;
@@ -199,7 +186,7 @@
   <script type='text/javascript'>
   var snapInvitation = document.createElement('style');
   snapInvitation.type = 'text/css';
-  snapInvitation.innerHTML = '#snapins_invite {background-color: rgb(255,255,255); border-radius: 8px; font-family: "Arial", sans-serif; overflow: visible; visibility: hidden;}';
+  snapInvitation.innerHTML = '#snapins_invite {background-color: rgb(255,255,255);Position: fixed !important; border-radius: 8px; font-family: "Arial", sans-serif; overflow: visible; visibility: hidden;}';
   document.getElementsByTagName('body')[0].appendChild(snapInvitation);
   
   var acceptInvitation = document.createElement('style');
@@ -228,20 +215,13 @@
 	  var initESW = function(gslbBaseURL) {
 		  embedded_svc.settings.displayHelpButton = false; //Or false
 		  embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-	  /************************************************************************
-	  this would be the setting where we can pass a variable to prefill the chat form
-	  **************************************************************************/
-	  /*    embedded_svc.settings.prepopulatedPrechatFields = {
-			FirstName: ìJohnî,
-			LastName: ìDoeî,
-			Email: ìjohn.doe@salesforce.comî,
-	   };*/
-		embedded_svc.settings.prepopulatedPrechatFields = {
 
-		 What_product_is_your_enquiry_about__c: 'Please Select',
-		 What_would_you_like_to_contact_us_about__c: 'Please Select'
-		 	
-		};
+		  embedded_svc.settings.prepopulatedPrechatFields = {
+
+			 What_product_is_your_enquiry_about__c: 'Please Select',
+			 What_would_you_like_to_contact_us_about__c: 'Please Select'
+
+		   };
 		  
 		  embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		  embedded_svc.settings.entryFeature = 'LiveAgent';
